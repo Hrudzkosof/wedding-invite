@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding invite D&A</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video class="video-background" autoplay muted loop>
+        <source src="video/back.mp4" type="video/mp4">
+      </video>
+      
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="bride-groom-names">Dzhambulat & Anastasia</div>
+
+    <div class="invitation-box">
+        <p class="header-text">
+          С огромной радостью и любовью приглашаем вас разделить с нами особенный день — день нашей свадьбы!
+        </p>
+        <p class="header-text">
+          Мы с нетерпением ждём момента, когда сможем сказать друг другу “да” под небом Кавказа, среди гор, традиций и самых близких людей.
+        </p>
+      </div>
+  
+    <div class="calendar-title">September 2026</div>
+    <div class="calendar-image">
+        <img src="images/calendar_final.png" alt="Календарь 26 сентября 2026">
+      </div>
+
+      <div class="location-block">
+        <div class="location-label">Место проведения:</div>
+        <div class="location-name">Грузия</div>
+      </div>
+  
+    <h2 class="confirmation-heading">Пожалуйста, подтвердите своё присутствие</h2>
+  
+    <form id="weddingForm">
+      <label>Имя и Фамилия</label>
+      <input type="text" name="firstName" required>
+  
+      <label>Количество гостей</label>
+      <input type="number" name="guests" min="1" max="10" required>
+  
+      <div class="radio-group">
+        <label><input type="radio" name="attendance" value="Да, с удовольствием!" required> Да, с удовольствием!</label>
+        <label><input type="radio" name="attendance" value="К сожалению, не могу"> К сожалению, не могу</label>
+      </div>
+  
+      <button type="submit">Подтвердить</button>
+    </form>
+
+    <div class="footer-note">
+        Подробности торжества мы сообщим вам немного позже — обещаем, будет красиво, вкусно и по-настоящему тепло!
+      </div>
+  </div>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("L_nv1PiodsRdYhrIX");
+    })();
+
+    document.getElementById('weddingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_syp4evn', 'template_k6znefd', this)
+        .then(() => alert("Спасибо! Мы получили ваш ответ."))
+        .catch(err => alert("Ошибка отправки: " + JSON.stringify(err)));
+    });
+  </script>
+</body>
+</html>
