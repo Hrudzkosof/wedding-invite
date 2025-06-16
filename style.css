@@ -218,49 +218,75 @@ input::placeholder {
   
   
   
-
   @media screen and (max-width: 480px) {
     .bride-groom-names {
-      font-size: 26px;
-      margin-bottom: 10px;
+      font-size: 65px;
+      margin-bottom: 20px;
     }
   
     .invitation-box {
-      max-width: 300px;
-      margin: 20px auto;
-      padding: 20px;
-      font-size: 10px;
-      line-height: 1.4;
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 30px;
     }
   
     .header-text {
-      font-size: 15px;
-      line-height: 1.4;
-      margin-bottom: 12px;
+      font-size: 35px;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
   
     .calendar-title {
-      font-size: 26px;
+      font-size: 55px;
       margin-bottom: -25px;
     }
   
-    form {
-      padding: 20px;
+    .location-label {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+  
+    .location-name {
+      font-size: 55px;
+      margin-bottom: 40px;
+    }
+  
+    .confirmation-heading {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  
+    label {
+      font-size: 24px;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      font-size: 30px;
+      padding: 12px;
+    }
+  
+    .radio-group label {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+  
+    .radio-group input[type="radio"] {
+      width: 28px;
+      height: 28px;
     }
   
     button {
-      padding: 10px 20px;
-      font-size: 14px;
+      font-size: 22px;
+      padding: 14px 28px;
     }
-
-    label{
-        font-size: 8px;
+  
+    .footer-note {
+      font-size: 20px;
+      line-height: 1.8;
+      padding: 0 20px;
+      margin-top: 60px;
     }
-
-      .confirmation-heading{
-        font-size: 15px;
-      }
-
- 
   }
+  
   
